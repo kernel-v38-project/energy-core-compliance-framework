@@ -1,28 +1,58 @@
 # Energy_Core Enterprise - Compliance & Architecture Framework
 
-Welcome to the official public compliance and architectural index for **energy_core Enterprise** (Project Blackstart).
+Welcome to the public compliance and architecture index for **energy_core Enterprise** (Project Blackstart).
 
-This repository serves as the public verification gateway and Trust Center for institutional buyers, utility innovation teams, and M&A technology scouts looking to evaluate the platform's architecture, data governance, and regulatory compliance.
+This repository serves as the public trust center and verification gateway for institutional buyers, utility innovation teams, and M&A technology scouts evaluating the platform’s architecture, data governance, and regulatory posture.
 
 ## 🌐 IP Acquisition & Corporate Technology Transfer
-The complete intellectual property (IP) and source code for energy_core are held in a secure, private repository. The asset is fully structured for corporate carve-out, technology transfer, or outright M&A acquisition.
+
+The core intellectual property and source code for energy_core are maintained in a private repository.
+
+Public materials here are intended to support:
+- technical due diligence;
+- procurement review;
+- architecture evaluation;
+- corporate carve-out and technology transfer discussions;
+- NDA-based source code review.
 
 - **Live Executive Gateway:** [View the Technical Showcase Portal](https://kernel-v38-project.github.io/energy-core-compliance-framework/)
-- **Technical Due Diligence Status:** 100% Production-Ready. Features structural multi-tenancy (RLS-like logic), automated audit-trail logging, Zero-Config DevContainers, strict production startup guards, and asynchronous FastAPI performance.
+- **Access model:** Public documentation is provided for initial review; deeper implementation details are available under NDA.
 
 ## 🏗️ Core Architectural Blueprint
-The platform brings together a secure four-layer infrastructure designed for distributed energy assets, remote microgrids, and utility compliance:
-1. **Field Telemetry Layer:** High-throughput read-only data ingestion from physical SCADA/PLC systems via secure Edge Gateways.
-2. **Environmental Validation Engine:** Automated ETL pipelines pulling live reanalysis weather and asset-site metrics directly from the European **Copernicus / Sentinel** satellite constellation.
-3. **Immutable Audit Trail:** Blockchain-backed revenue and workflow notarization layer managed via Hardhat (Polygon-ready).
-4. **Enterprise Operations UI:** High-performance multipage interface designed for secure executive oversight and multi-site telemetry correlation.
+
+The platform is organized around four layers:
+
+1. **Field Telemetry Layer**  
+   Read-only ingestion from physical SCADA/PLC systems through secure edge gateways.
+
+2. **Environmental Validation Engine**  
+   ETL pipelines that enrich asset data with Copernicus / Sentinel-derived weather and site signals.
+
+3. **Audit Trail Layer**  
+   Immutable workflow and revenue traceability with blockchain-aligned notarization support.
+
+4. **Enterprise Operations UI**  
+   Multipage interface for secure oversight, cross-site telemetry review, and operational decision support.
 
 ## 🛡️ Enterprise Governance & Trust Center
-To facilitate immediate IT procurement and legal clearance, the framework includes the following core policy blueprints:
-- **[Data Processing Agreement (DPA) Summary](./docs/DPA_summary.md):** Formal Controller-to-Processor data boundaries.
-- **[Subprocessor Inventory](./docs/subprocessors.md):** Designed with a *Self-Hosted / Customer-Managed* default position, minimizing third-party data residency friction under GDPR.
+
+The public trust center includes the following documents:
+
+- **[Security Policy](./SECURITY.md):** Security controls, reporting process, and responsible use.
+- **[Compliance Overview](./docs/compliance.md):** Enterprise compliance posture and review topics.
+- **[Privacy Overview](./docs/privacy.md):** Data categories, purposes, retention, and rights handling.
+- **[Data Processing Agreement (DPA) Summary](./docs/dpa.md):** Controller-to-processor terms and data handling summary.
+- **[Subprocessor Inventory](./docs/subprocessors.md):** Third-party processing and transfer overview.
+- **[Incident Response](./docs/incident-response.md):** Detection, containment, recovery, and review process.
+- **[Architecture Overview](./docs/architecture.md):** System structure, layers, and deployment notes.
+- **[Security FAQ](./docs/security-questions.md):** Common buyer-facing questions and answers.
 
 ## 💼 Due Diligence & Source Code Access
-The full production codebase, OpenAPI schemas, and smart contract specifications can be shared under a standard Non-Disclosure Agreement (NDA). 
 
-For formal inquiries, source code review access, or to schedule a technical deep-dive with the author, please open an issue or contact the engineering management via the link on our [Showcase Portal](https://kernel-v38-project.github.io/energy-core-compliance-framework/).
+The full production codebase, OpenAPI schemas, and implementation details can be shared under a standard NDA.
+
+For formal inquiries, source code review access, or a technical deep-dive, please open an issue or use the contact path provided in the showcase portal.
+
+## Status
+
+This repository is a public trust and architecture index. It is not the full production system.
