@@ -1,0 +1,55 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - skip-changelog
+      - documentation-only
+    authors:
+      - dependabot[bot]
+      - github-actions[bot]
+
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking-change
+        - Semver-Major
+
+    - title: New Features ✨
+      labels:
+        - enhancement
+        - feature
+        - Semver-Minor
+
+    - title: Security & Compliance 🛡️
+      labels:
+        - security
+        - compliance
+        - privacy
+        - dpa
+        - subprocessors
+        - trust-center
+
+    - title: Architecture & Platform
+      labels:
+        - architecture
+        - backend
+        - frontend
+        - infrastructure
+        - api
+
+    - title: Documentation
+      labels:
+        - docs
+        - documentation
+        - readme
+
+    - title: Maintenance
+      labels:
+        - maintenance
+        - chore
+        - refactor
+        - Semver-Patch
+
+    - title: Other Changes
+      labels:
+        - "*"
