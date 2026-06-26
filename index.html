@@ -20,7 +20,7 @@
       --shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
     html, body { margin: 0; padding: 0; background: radial-gradient(circle at top, #101c36 0%, var(--bg) 45%, #050914 100%); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     a { color: var(--accent-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -87,7 +87,7 @@
     .feature h3, .doc-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
     .feature p, .doc-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.96rem; }
     .docs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .doc-card a { font-weight: 600; color: var(--accent-2); }
+    .doc-card a { font-weight: 600; color: var(--accent-2); cursor: pointer; }
     .doc-card a:hover { text-decoration: underline; }
     .note {
       padding: 14px 16px; border-left: 3px solid var(--warn);
@@ -98,8 +98,9 @@
       margin-top: 20px; padding: 18px 0 0; color: var(--muted); font-size: 0.92rem;
       display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     }
-    ul { margin: 10px 0 0 18px; color: var(--muted); line-height: 1.7; }
-    li + li { margin-top: 6px; }
+    .compliance-viewer {
+      background: #0d1626; border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 14px; font-family: monospace; white-space: pre-wrap; color: #a5d6ff; font-size: 0.9rem; max-height: 300px; overflow-y: auto;
+    }
     .small { font-size: 0.92rem; color: var(--muted); }
     @media (max-width: 920px) {
       .hero, .grid-2, .grid-4, .docs { grid-template-columns: 1fr; }
@@ -124,9 +125,6 @@
         <p>
           This repository serves as the public trust center for institutional buyers, utility innovation teams, and M&A technology scouts evaluating the platform’s architecture, data governance, and regulatory posture.
         </p>
-        <p>
-          Public materials are intended to support technical due diligence, procurement review, architecture evaluation, and corporate carve-out or technology transfer discussions.
-        </p>
       </div>
 
       <aside class="hero-card">
@@ -140,14 +138,6 @@
             <span class="label">Restricted</span>
             <div class="value">Source code, OpenAPI schemas, detailed implementation under NDA</div>
           </div>
-          <div class="stat">
-            <span class="label">Review path</span>
-            <div class="value">Issue, portal contact, or formal NDA request</div>
-          </div>
-          <div class="stat">
-            <span class="label">Status</span>
-            <div class="value">Public index for diligence and architecture review</div>
-          </div>
         </div>
       </aside>
     </section>
@@ -157,89 +147,95 @@
       <div class="grid-2">
         <div class="feature">
           <h3>Private core assets</h3>
-          <p>
-            The core intellectual property and source code for energy_core are maintained in a private repository.
-          </p>
+          <p>The core intellectual property and source code for energy_core are maintained in a private repository.</p>
         </div>
         <div class="feature">
           <h3>Public purpose</h3>
-          <p>
-            This public repository is designed to give buyers and reviewers a reliable first pass on architecture, governance, and compliance posture.
-          </p>
+          <p>This public repository gives reviewers an immediate, reliable pass on architecture and compliance posture.</p>
         </div>
-      </div>
-      <div class="note">
-        Live Executive Gateway: <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework">View the Technical Code Repository</a>.
-        Deeper implementation details are available under NDA.
       </div>
     </section>
 
     <section class="section">
       <h2>Core Architectural Blueprint</h2>
-      <p>The platform is organized around four layers:</p>
+      <p>The platform is organized around four enterprise layers:</p>
       <div class="grid-4">
         <div class="feature">
-          <h3>Field Telemetry Layer</h3>
+          <h3>Field Telemetry</h3>
           <p>Read-only ingestion from physical SCADA/PLC systems through secure edge gateways.</p>
         </div>
         <div class="feature">
-          <h3>Environmental Validation Engine</h3>
-          <p>ETL pipelines that enrich asset data with Copernicus / Sentinel-derived weather and site signals.</p>
+          <h3>Copernicus Engine</h3>
+          <p>ETL pipelines enriching telemetry with European Copernicus satellite weather data.</p>
         </div>
         <div class="feature">
-          <h3>Audit Trail Layer</h3>
-          <p>Workflow and revenue traceability with blockchain-aligned notarization support.</p>
+          <h3>Audit Trail</h3>
+          <p>Workflow and revenue traceability backed by blockchain-aligned notarization.</p>
         </div>
         <div class="feature">
-          <h3>Enterprise Operations UI</h3>
-          <p>Multipage interface for secure oversight, cross-site telemetry review, and decision support.</p>
+          <h3>Operations UI</h3>
+          <p>High-performance multipage executive interface for multi-site analytics.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <h2>Enterprise Governance & Trust Center</h2>
-      <p>All governance framework details and regulatory blueprints are fully indexed directly on our main repository page. Click below to open the documentation hub:</p>
-      <div class="docs" style="grid-template-columns: 1fr;">
-        <div class="doc-card" style="text-align: center; padding: 30px;">
-          <h3><a href="https://github.com/kernel-v38-project/energy-core-compliance-framework#%EF%B8%8F-enterprise-governance--trust-center" style="font-size: 1.4rem; color: #6ea8fe;">👉 Open the Governance & Compliance Center 👈</a></h3>
-          <p style="margin-top: 10px;">Click here to review the full index including Security Policy, Compliance Overview, Privacy Policy, DPA Summary, and Subprocessor Inventory directly on GitHub, bypassing any browser cache or 404 errors.</p>
+      <p>Clicca sui pulsanti qui sotto per leggere le anteprime dei documenti ufficiali direttamente in questa pagina:</p>
+      
+      <div class="docs">
+        <div class="doc-card">
+          <h3><a onclick="showDoc('security')">➡️ Read Security Policy</a></h3>
+          <p>Security controls and vulnerability management protocols.</p>
         </div>
+        <div class="doc-card">
+          <h3><a onclick="showDoc('privacy')">➡️ Read Privacy Blueprint</a></h3>
+          <p>Data processing scopes, retention periods, and GDPR mapping.</p>
+        </div>
+        <div class="doc-card">
+          <h3><a onclick="showDoc('dpa')">➡️ Read DPA Summary</a></h3>
+          <p>Controller-to-Processor formal boundaries and liability terms.</p>
+        </div>
+        <div class="doc-card">
+          <h3><a onclick="showDoc('sub')">➡️ Read Subprocessor Inventory</a></h3>
+          <p>Third-party sub-processors and data residency constraints.</p>
+        </div>
+      </div>
+
+      <div id="viewer-container" style="display: none; margin-top: 20px;">
+        <h4 id="viewer-title" style="margin: 10px 0 5px; color: var(--accent-2);">Document View</h4>
+        <div id="viewer" class="compliance-viewer">Seleziona un documento...</div>
       </div>
     </section>
 
     <section class="section">
       <h2>Due Diligence & Source Code Access</h2>
-      <div class="grid-2">
-        <div class="feature">
-          <h3>What can be shared</h3>
-          <p>
-            The full production codebase, OpenAPI schemas, and implementation details can be shared under a standard NDA.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>How to request access</h3>
-          <p>
-            For formal inquiries, source code review access, or a technical deep-dive, open an issue or use the contact path provided in the showcase portal.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Status</h2>
-      <p>
-        This repository is a public trust and architecture index. It is not the full production system.
-      </p>
-      <p class="small">
-        The purpose of this page is to provide a credible, evidence-led first view of the platform for procurement, diligence, and acquisition review.
-      </p>
+      <p>The full production codebase, smart contracts, and OpenAPI schemas can be shared under a standard Non-Disclosure Agreement (NDA). Please open a GitHub Issue to get in touch with the author.</p>
     </section>
 
     <footer class="footer">
       <span>© 2026 energy_core Enterprise</span>
-      <span>Public trust center • NDA-supported diligence path • Architecture index</span>
+      <span>Public trust center • Embedded Compliance Engine</span>
     </footer>
   </div>
+
+  <script>
+    const docsData = {
+      security: `[SECURITY POLICY - PREVIEW]\nStatus: ACTIVE\nScope: Enterprise Energy Telemetry Framework\n\n1. Encryption Guards\n- All database assets utilize AES-256 transparent data encryption at rest.\n- TLS 1.3 enforced for all telemetry data ingestion pipelines via secure Edge Gateways.\n\n2. Access Control\n- Least-Privilege operational architecture.\n- Strict Multi-Tenancy validation running on core Row-Level Security (RLS) simulation logic.\n- System execution guarded by explicit production startup safety checks.`,
+      
+      privacy: `[PRIVACY OVERVIEW - GDPR COMPLIANCE]\nStatus: VERIFIED\nScope: Copernicus ETL & Utility Metering\n\n1. Data Minimization\n- The application processes only machine-to-machine SCADA readings and climate datasets.\n- No direct personally identifiable information (PII) is stored or tracked within core telemetry logs.\n\n2. Retention Schedules\n- Environmental logs are compiled and indexed for a maximum duration of 5 rolling years.\n- Audit trail notarizations are permanent and immutable.`,
+      
+      dpa: `[DATA PROCESSING AGREEMENT SUMMARY]\nStatus: PRODUCTION READY\nClassification: Controller-to-Processor (Standard Contractual Clauses)\n\n1. Operational Boundaries\n- The platform executes tasks strictly as a technological Processor under customer direction.\n- The underlying infrastructure is optimized for client-managed, self-hosted deployment models to eliminate third-party data residency friction under GDPR rules.`,
+      
+      sub: `[SUBPROCESSOR INVENTORY]\nStatus: AUDITED\nLast Update: June 2026\n\nTo ensure structural independence and reduce data supply-chain liability, the energy_core enterprise engine operates with only two validated primary infrastructural partners:\n\n1. GitHub Inc. (Code hosting, static document versioning, and CI/CD pipelines).\n2. Streamlit / Snowflake Inc. (Executive Dashboard rendering, limited to interface execution logs).\n\n*Note: Default configuration supports a 100% On-Premises or Private Cloud carve-out.*`
+    };
+
+    function showDoc(key) {
+      document.getElementById('viewer-container').style.display = 'block';
+      document.getElementById('viewer').textContent = docsData[key];
+      document.getElementById('viewer-title').textContent = "Previewing: " + key.toUpperCase() + " POLICY (Embedded Live)";
+      document.getElementById('viewer-container').scrollIntoView();
+    }
+  </script>
 </body>
 </html>
