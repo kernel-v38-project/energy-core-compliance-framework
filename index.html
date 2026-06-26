@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy_Core Enterprise - Technology Transfer Opportunity</title>
+    <style>
+        :root {
+            --bg: #0b1329;
+            --card-bg: #1c2541;
+            --accent: #4cc9f0;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #3a506b;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .badge {
+            background-color: rgba(76, 201, 240, 0.15);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin: 0 0 40px 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 12px;
+            color: #e2e8f0;
+        }
+        li strong {
+            color: #ffffff;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background-color: rgba(255,255,255,0.05);
+            color: #ffffff;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1c2541 0%, #0b1329 100%);
+            border: 2px solid var(--accent);
+            text-align: center;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0b1329;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(76, 201, 240, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="badge">OPPORTUNITÀ DI ACQUISIZIONE IP & TECH TRANSFER</div>
+        <h1>PROJECT BLACKSTART</h1>
+        <p class="subtitle">Architettura Software Enterprise per la Validazione di Telemetria Energetica e Ingestione Dati Satellitari</p>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Ingegneria Core (Stack & DevOps)</h2>
+                <ul>
+                    <li><strong>Backend Asincrono (FastAPI):</strong> Struttura logica ad alte prestazioni interamente scritta in Python (80.7% del codice core).</li>
+                    <li><strong>Zero-Config Deployment:</strong> Architettura nativamente containerizzata con configurazioni industriali <code>Dockerfile</code> e <code>docker-compose.yml</code> pronte all'uso.</li>
+                    <li><strong>Interfaccia Executive:</strong> Front-end multipagina reattivo basato su Streamlit per l'analisi immediata dei flussi operativi multi-sito.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Funzionalità Enterprise Integrate</h2>
+                <ul>
+                    <li><strong>Isolamento Multi-Tenant:</strong> Regole di segregazione logica avanzate guidate da header nativi <code>X-Tenant-Id</code>.</li>
+                    <li><strong>Tracciabilità Totale:</strong> Gestione degli errori standardizzata secondo le specifiche internazionali <strong>RFC 7807</strong> e correlation tracing asincrono.</li>
+                    <li><strong>Notarizzazione Web3:</strong> Layer di auditing immutabile opzionale tramite smart contract integrati via Hardhat (Polygon).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <h2>Data Strategy & Validazione Incrociata</h2>
+            <p>A differenza dei cruscotti di monitoraggio tradizionali, la piattaforma esegue un motore di validazione read-only incrociando due fonti indipendenti:</p>
+            <ul>
+                <li><strong>Field Layer:</strong> Ingestione in tempo reale da centrali fisiche e turbine tramiteEdge Gateway e API SCADA/PLC dedicate.</li>
+                <li><strong>Environmental Layer:</strong> Pipeline ETL automatizzata connessa direttamente ai flussi satellitari della costellazione europea <strong>Copernicus / Sentinel</strong> per la rianalisi meteorologica delle condizioni reali.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Quadro di Conformità e Governance (Trust Center)</h2>
+            <p>L'asset è stato progettato seguendo rigorosi criteri di <em>Security & Compliance by Design</em>, facilitando l'approvazione immediata da parte degli uffici legali corporate delle utility:</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Documento d'Impresa</th>
+                            <th>Stato e Posizione Linea Linea</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Data Processing Agreement (DPA)</strong></td>
+                            <td>Disponibile. Definisce la piattaforma come "Processor" e il cliente come "Controller".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Elenco Sottoprocessori</strong></td>
+                            <td>Struttura snella. Architettura nativamente <em>Self-Hosted / Customer-Managed</em> (Impatto GDPR minimo).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security Framework & FAQ</strong></td>
+                            <td>Politiche di fail-fast attive (Strict Production Startup Checks) e rate limiting.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Avvia la Due Diligence Tecnica</h2>
+            <p>Il codice sorgente dell'applicazione, la specifica OpenAPI e i dettagli dei contratti sono protetti all'interno di un repository GitHub privato.</p>
+            <p>L'accesso completo per scopi di valutazione, audit o trattative di acquisizione della proprietà intellettuale (M&A) viene concesso a partner industriali qualificati previa sottoscrizione di un accordo di riservatezza (NDA).</p>
+            <a href="mailto:tuo-indirizzo-email@esempio.com?subject=Richiesta%20Informazioni%20Project%20Blackstart%20-%20M%26A" class="btn">Richiedi Contatto Ufficiale</a>
+        </div>
+    </div>
+
+</body>
+</html>
