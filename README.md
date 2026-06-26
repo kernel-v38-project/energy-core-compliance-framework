@@ -1,10 +1,10 @@
-# Energy_Core Enterprise - Compliance & Architecture Framework
+# Energy_Core Enterprise — Compliance & Architecture Framework
 
 Welcome to the public compliance and architecture index for **energy_core Enterprise** (Project Blackstart).
 
 This repository serves as the public trust center and verification gateway for institutional buyers, utility innovation teams, and M&A technology scouts evaluating the platform’s architecture, data governance, and regulatory posture.
 
-## 🌐 IP Acquisition & Corporate Technology Transfer
+## IP Acquisition & Corporate Technology Transfer
 
 The core intellectual property and source code for energy_core are maintained in a private repository.
 
@@ -18,7 +18,7 @@ Public materials in this repository are intended to support:
 - **Live Executive Gateway:** [View the Technical Showcase Portal](https://kernel-v38-project.github.io/energy-core-compliance-framework/)
 - **Access model:** Public documentation is provided for initial review; deeper implementation details are available under NDA.
 
-## 🏗️ Core Architectural Blueprint
+## Core Architectural Blueprint
 
 The platform is organized around four layers:
 
@@ -29,12 +29,12 @@ The platform is organized around four layers:
    ETL pipelines that enrich asset data with Copernicus / Sentinel-derived weather and site signals.
 
 3. **Audit Trail Layer**  
-   Immutable workflow and revenue traceability with blockchain-aligned notarization support.
+   Workflow and revenue traceability with blockchain-aligned notarization support.
 
 4. **Enterprise Operations UI**  
    Multipage interface for secure oversight, cross-site telemetry review, and operational decision support.
 
-## 🛡️ Enterprise Governance & Trust Center
+## Enterprise Governance & Trust Center
 
 The public trust center includes the following documents:
 
@@ -47,7 +47,7 @@ The public trust center includes the following documents:
 - **[Architecture Overview](./docs/architecture.md):** System structure, layers, and deployment notes.
 - **[Security FAQ](./docs/security-questions.md):** Common buyer-facing questions and answers.
 
-## 💼 Due Diligence & Source Code Access
+## Due Diligence & Source Code Access
 
 The full production codebase, OpenAPI schemas, and implementation details can be shared under a standard NDA.
 
