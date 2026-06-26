@@ -87,7 +87,8 @@
     .feature h3, .doc-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
     .feature p, .doc-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.96rem; }
     .docs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .doc-card a { font-weight: 600; }
+    .doc-card a { font-weight: 600; color: var(--accent-2); }
+    .doc-card a:hover { text-decoration: underline; }
     .note {
       padding: 14px 16px; border-left: 3px solid var(--warn);
       background: rgba(255, 209, 102, 0.08); border-radius: 14px; color: var(--text);
@@ -198,22 +199,22 @@
 
     <section class="section">
       <h2>Enterprise Governance & Trust Center</h2>
-      <p>The public trust center includes the following documents:</p>
+      <p>The public trust center includes the following documents (click to preview):</p>
       <div class="docs">
         <div class="doc-card">
-          <h3><a href="./SECURITY.md">Security Policy</a></h3>
+          <h3><a href="./docs/SICUREZZA.md">Security Policy</a></h3>
           <p>Security controls, reporting process, and responsible use.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/compliance.md">Compliance Overview</a></h3>
+          <h3><a href="./docs/COMPLIANCE.md">Compliance Overview</a></h3>
           <p>Enterprise compliance posture and review topics.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/privacy.md">Privacy Overview</a></h3>
+          <h3><a href="./docs/PRIVACY.md">Privacy Overview</a></h3>
           <p>Data categories, purposes, retention, and rights handling.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/dpa.md">Data Processing Agreement (DPA) Summary</a></h3>
+          <h3><a href="./docs/DPA_summary.md">Data Processing Agreement (DPA) Summary</a></h3>
           <p>Controller-to-processor terms and data handling summary.</p>
         </div>
         <div class="doc-card">
@@ -221,15 +222,15 @@
           <p>Third-party processing and transfer overview.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/incident-response.md">Incident Response</a></h3>
+          <h3><a href="./docs/INCIDENT_RESPONSE.md">Incident Response</a></h3>
           <p>Detection, containment, recovery, and review process.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/architecture.md">Architecture Overview</a></h3>
+          <h3><a href="./docs/ARCHITECTURE.md">Architecture Overview</a></h3>
           <p>System structure, layers, and deployment notes.</p>
         </div>
         <div class="doc-card">
-          <h3><a href="./docs/security-questions.md">Security FAQ</a></h3>
+          <h3><a href="./docs/SECURITY_FAQ.md">Security FAQ</a></h3>
           <p>Common buyer-facing questions and answers.</p>
         </div>
       </div>
