@@ -8,7 +8,7 @@ This repository serves as the public trust center and verification gateway for i
 
 The core intellectual property and source code for energy_core are maintained in a private repository.
 
-Public materials here are intended to support:
+Public materials in this repository are intended to support:
 - technical due diligence;
 - procurement review;
 - architecture evaluation;
