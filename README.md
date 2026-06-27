@@ -1,58 +1,83 @@
-# Energy_Core Enterprise — Compliance & Architecture Framework
+# Energy_Core Enterprise
+## Energy telemetry validation, compliance, and architecture framework
 
-Welcome to the public compliance and architecture index for **energy_core Enterprise** (Project Blackstart).
+Energy_Core Enterprise is a B2B platform framework for validating energy telemetry, enriching operational data with Copernicus / Sentinel environmental signals, and maintaining an auditable compliance posture for enterprise and utility-scale deployments.
 
-This repository serves as the public trust center and verification gateway for institutional buyers, utility innovation teams, and M&A technology scouts evaluating the platform’s architecture, data governance, and regulatory posture.
+It is designed for institutional buyers, utility innovation teams, and M&A or corporate development teams that need a clear view of architecture, governance, and due diligence readiness before deeper technical review.
 
-## IP Acquisition & Corporate Technology Transfer
+## What the platform does
 
-The core intellectual property and source code for energy_core are maintained in a private repository.
+Energy_Core Enterprise helps teams:
+- validate telemetry from field systems in a read-only model;
+- enrich asset data with environmental signals for better operational context;
+- maintain traceable audit trails across workflows and revenue-related records;
+- support secure, multi-site operational review;
+- present a public trust center for procurement and diligence.
 
-Public materials in this repository are intended to support:
+## Why it matters
+
+Enterprise buyers need more than feature claims. They need evidence that the platform is:
+- architected for controlled data handling;
+- documented for compliance review;
+- transparent about subprocessors and legal posture;
+- ready for technical due diligence;
+- structured for NDA-based source code access when deeper review is required.
+
+## Core capabilities
+
+### Field telemetry validation
+Read-only ingestion from physical SCADA / PLC systems through secure edge gateways.
+
+### Environmental Validation Engine
+ETL pipelines enrich asset data with weather and site signals derived from Copernicus / Sentinel sources.
+
+### Audit trail and traceability
+Workflow and revenue traceability are maintained with blockchain-aligned notarization support.
+
+### Enterprise operations UI
+A multipage interface supports secure oversight, cross-site telemetry review, and operational decision support.
+
+## Trust center
+
+The public trust center includes:
+- [Security Policy](./SECURITY.md)
+- [Compliance Overview](./docs/compliance.md)
+- [Privacy Overview](./docs/privacy.md)
+- [DPA Summary](./docs/dpa.md)
+- [Subprocessor Inventory](./docs/subprocessors.md)
+- [Incident Response](./docs/incident-response.md)
+- [Architecture Overview](./docs/architecture.md)
+- [Security FAQ](./docs/security-questions.md)
+
+## For buyers and partners
+
+This repository is intended to support:
 - technical due diligence;
 - procurement review;
-- architecture evaluation;
+- architecture assessment;
+- compliance review;
 - corporate carve-out and technology transfer discussions;
 - NDA-based source code review.
 
-- **Live Executive Gateway:** [View the Technical Showcase Portal](https://kernel-v38-project.github.io/energy-core-compliance-framework/)
-- **Access model:** Public documentation is provided for initial review; deeper implementation details are available under NDA.
+If your team needs deeper implementation details, OpenAPI schemas, or source-level review, use the formal contact path in the showcase portal.
 
-## Core Architectural Blueprint
+## Access model
 
-The platform is organized around four layers:
+- Public documentation is available for first-pass review.
+- Deeper implementation details are available under NDA.
+- The full production codebase remains in a private repository.
 
-1. **Field Telemetry Layer**  
-   Read-only ingestion from physical SCADA/PLC systems through secure edge gateways.
+## Quick navigation
 
-2. **Environmental Validation Engine**  
-   ETL pipelines that enrich asset data with Copernicus / Sentinel-derived weather and site signals.
-
-3. **Audit Trail Layer**  
-   Workflow and revenue traceability with blockchain-aligned notarization support.
-
-4. **Enterprise Operations UI**  
-   Multipage interface for secure oversight, cross-site telemetry review, and operational decision support.
-
-## Enterprise Governance & Trust Center
-
-The public trust center includes the following documents:
-
-- **[Security Policy](./SECURITY.md):** Security controls, reporting process, and responsible use.
-- **[Compliance Overview](./docs/compliance.md):** Enterprise compliance posture and review topics.
-- **[Privacy Overview](./docs/privacy.md):** Data categories, purposes, retention, and rights handling.
-- **[Data Processing Agreement (DPA) Summary](./docs/dpa.md):** Controller-to-processor terms and data handling summary.
-- **[Subprocessor Inventory](./docs/subprocessors.md):** Third-party processing and transfer overview.
-- **[Incident Response](./docs/incident-response.md):** Detection, containment, recovery, and review process.
-- **[Architecture Overview](./docs/architecture.md):** System structure, layers, and deployment notes.
-- **[Security FAQ](./docs/security-questions.md):** Common buyer-facing questions and answers.
-
-## Due Diligence & Source Code Access
-
-The full production codebase, OpenAPI schemas, and implementation details can be shared under a standard NDA.
-
-For formal inquiries, source code review access, or a technical deep-dive, please open an issue or use the contact path provided in the showcase portal.
+- [Technical Showcase Portal](https://kernel-v38-project.github.io/energy-core-compliance-framework/)
+- [Release Notes](./RELEASE_NOTES.md)
+- [Repository Activity](./docs/maintenance.md)
 
 ## Status
 
-This repository is a public trust and architecture index. It is not the full production system.
+This repository is a public trust and architecture index.
+It is not the full production system.
+
+## Release discipline
+
+Public documents are maintained through a controlled update process so that DPA, subprocessors, release notes, and evidence stay aligned as the platform changes.
