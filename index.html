@@ -3,109 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Public compliance and architecture index for energy_core Enterprise (Project Blackstart)." />
-  <title>Energy_Core Enterprise — Compliance & Architecture Framework</title>
+  <meta name="description" content="Energy_Core Enterprise is a B2B framework for energy telemetry validation, environmental data enrichment, compliance, and due diligence." />
+  <title>Energy_Core Enterprise | Compliance & Architecture Framework</title>
   <style>
-    :root {
-      --bg: #0b1220;
-      --panel: #111a2e;
-      --panel-2: #0f1729;
-      --text: #e5eefc;
-      --muted: #9fb0cf;
-      --accent: #6ea8fe;
-      --accent-2: #8ad4ff;
-      --border: rgba(255,255,255,0.08);
-      --good: #7ee787;
-      --warn: #ffd166;
-      --shadow: 0 20px 50px rgba(0,0,0,0.35);
+    :root{
+      --bg:#06101f;
+      --bg2:#0a1730;
+      --panel:rgba(255,255,255,.04);
+      --panel-2:rgba(255,255,255,.07);
+      --text:#eef4ff;
+      --muted:#a8b8d8;
+      --line:rgba(255,255,255,.10);
+      --accent:#79a8ff;
+      --accent2:#7ef0d6;
+      --warn:#ffd166;
+      --shadow:0 24px 80px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius2:18px;
+      font-synthesis-weight:none;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-    html, body { margin: 0; padding: 0; background: radial-gradient(circle at top, #101c36 0%, var(--bg) 45%, #050914 100%); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color: var(--accent-2); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 1140px; margin: 0 auto; padding: 32px 20px 64px; }
-    .topbar {
-      display: flex; justify-content: space-between; align-items: center; gap: 16px;
-      padding: 14px 18px; border: 1px solid var(--border); border-radius: 18px;
-      background: rgba(10,16,30,0.75); backdrop-filter: blur(12px); box-shadow: var(--shadow);
-      margin-bottom: 26px;
+    *{box-sizing:border-box}
+    html,body{margin:0;background:
+      radial-gradient(circle at 20% 10%, rgba(121,168,255,.20), transparent 28%),
+      radial-gradient(circle at 80% 0%, rgba(126,240,214,.16), transparent 24%),
+      linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:var(--accent2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px 20px 72px}
+    .topbar{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      border:1px solid var(--line);background:rgba(7,12,24,.75);backdrop-filter:blur(16px);
+      border-radius:999px;padding:12px 16px;box-shadow:var(--shadow)
     }
-    .brand { display: flex; flex-direction: column; gap: 4px; }
-    .brand strong { font-size: 0.98rem; letter-spacing: 0.02em; }
-    .brand span { color: var(--muted); font-size: 0.9rem; }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 9px 12px; border-radius: 999px; border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04); color: var(--text); font-size: 0.88rem;
-      white-space: nowrap;
+    .brand{display:flex;flex-direction:column;gap:3px}
+    .brand strong{font-size:.96rem;letter-spacing:.01em}
+    .brand span{color:var(--muted);font-size:.88rem}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.04);white-space:nowrap;font-size:.92rem
     }
-    .hero {
-      padding: 34px 0 18px;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 24px;
-      align-items: start;
+    .badge::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--accent2);box-shadow:0 0 0 6px rgba(126,240,214,.12)}
+    .hero{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;
+      padding:28px 0 14px
     }
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3.6rem);
-      line-height: 1.04;
-      margin: 0 0 16px;
-      letter-spacing: -0.04em;
+    .hero-main,.hero-side,.section,.card{
+      border:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius:var(--radius);box-shadow:var(--shadow)
     }
-    .hero p {
-      font-size: 1.06rem;
-      line-height: 1.7;
-      color: var(--muted);
-      margin: 0 0 14px;
-      max-width: 68ch;
+    .hero-main{padding:34px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--accent2);font-size:.88rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em
     }
-    .hero-card, .section, .doc-card {
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(17,26,46,0.92), rgba(12,19,35,0.92));
-      border-radius: 22px;
-      box-shadow: var(--shadow);
+    .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent2);opacity:.8}
+    h1{margin:16px 0 16px;font-size:clamp(2.1rem,4.6vw,4.25rem);line-height:1.02;letter-spacing:-.05em}
+    .lead{margin:0 0 16px;color:var(--muted);font-size:1.08rem;line-height:1.75;max-width:66ch}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:13px 18px;border-radius:14px;border:1px solid var(--line);font-weight:700
     }
-    .hero-card { padding: 22px; }
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
-    .stat {
-      padding: 14px; border-radius: 16px; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#9c7dff);color:#07101d;border:none}
+    .btn.secondary{background:rgba(255,255,255,.04);color:var(--text)}
+    .trust-strip{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px
     }
-    .stat .label { display: block; color: var(--muted); font-size: 0.84rem; margin-bottom: 6px; }
-    .stat .value { font-size: 1rem; line-height: 1.45; }
-    .section { padding: 24px; margin-top: 20px; }
-    .section h2 { margin: 0 0 12px; font-size: 1.35rem; letter-spacing: -0.02em; }
-    .section p { margin: 0 0 12px; color: var(--muted); line-height: 1.7; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .feature, .doc-card {
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid var(--border);
+    .stat{
+      padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)
     }
-    .feature h3, .doc-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
-    .feature p, .doc-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.96rem; }
-    .docs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .doc-card a { font-weight: 600; color: var(--accent-2); cursor: pointer; }
-    .doc-card a:hover { text-decoration: underline; }
-    .note {
-      padding: 14px 16px; border-left: 3px solid var(--warn);
-      background: rgba(255, 209, 102, 0.08); border-radius: 14px; color: var(--text);
-      margin-top: 14px; line-height: 1.65;
+    .stat .k{display:block;color:var(--muted);font-size:.82rem;margin-bottom:8px}
+    .stat .v{font-size:1rem;line-height:1.45}
+    .hero-side{padding:22px;display:flex;flex-direction:column;gap:14px}
+    .hero-side img{width:100%;height:220px;object-fit:cover;border-radius:18px;border:1px solid var(--line);background:#0a1326}
+    .side-box{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .side-box h2{margin:0 0 8px;font-size:1.02rem}
+    .side-box p{margin:0;color:var(--muted);line-height:1.65;font-size:.95rem}
+    .section{margin-top:18px;padding:24px}
+    .section h2{margin:0 0 10px;font-size:1.35rem}
+    .section p{margin:0;color:var(--muted);line-height:1.7}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+    .card{padding:18px}
+    .card h3{margin:0 0 8px;font-size:1.02rem}
+    .card p{margin:0;color:var(--muted);line-height:1.65;font-size:.95rem}
+    .docs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+    .doc{
+      padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)
     }
-    .footer {
-      margin-top: 20px; padding: 18px 0 0; color: var(--muted); font-size: 0.92rem;
-      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    .doc h3{margin:0 0 6px;font-size:1rem}
+    .doc p{margin:0;color:var(--muted);line-height:1.65;font-size:.95rem}
+    .doc small{display:block;margin-top:8px;color:#cfe0ff}
+    .process{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px
     }
-    .compliance-viewer {
-      background: #0d1626; border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 14px; font-family: monospace; white-space: pre-wrap; color: #a5d6ff; font-size: 0.9rem; max-height: 300px; overflow-y: auto;
+    .step{
+      position:relative;padding:18px 18px 18px 18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.035)
     }
-    .small { font-size: 0.92rem; color: var(--muted); }
-    @media (max-width: 920px) {
-      .hero, .grid-2, .grid-4, .docs { grid-template-columns: 1fr; }
-      .topbar { flex-direction: column; align-items: flex-start; }
-      .stat-grid { grid-template-columns: 1fr; }
+    .step .n{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:30px;height:30px;border-radius:999px;background:rgba(121,168,255,.18);color:var(--accent2);font-weight:800;margin-bottom:10px
+    }
+    .step h3{margin:0 0 8px;font-size:1rem}
+    .step p{margin:0;color:var(--muted);line-height:1.65;font-size:.94rem}
+    .note{
+      margin-top:16px;padding:16px 18px;border-left:3px solid var(--warn);
+      background:rgba(255,209,102,.08);border-radius:14px;color:var(--text);line-height:1.7
+    }
+    .footer{
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      margin-top:18px;padding-top:16px;color:var(--muted);font-size:.92rem
+    }
+    .mini-links{display:flex;gap:14px;flex-wrap:wrap}
+    @media (max-width: 980px){
+      .hero,.grid-2,.grid-4,.docs,.process{grid-template-columns:1fr}
+      .topbar{border-radius:18px;flex-direction:column;align-items:flex-start}
+      .trust-strip{grid-template-columns:1fr}
+      .hero-main{padding:26px}
     }
   </style>
 </head>
@@ -113,129 +132,62 @@
   <div class="wrap">
     <header class="topbar">
       <div class="brand">
-        <strong>Energy_Core Enterprise — Compliance & Architecture Framework</strong>
-        <span>Public trust center and verification gateway for architecture, governance, and due diligence.</span>
+        <strong>Energy_Core Enterprise</strong>
+        <span>Compliance, architecture, and due diligence framework for energy telemetry platforms</span>
       </div>
-      <div class="pill">Public documentation • NDA for deeper review</div>
+      <div class="badge">Public trust center • NDA for deeper review</div>
     </header>
 
     <section class="hero">
-      <div>
-        <h1>Public compliance and architecture index for energy_core Enterprise.</h1>
-        <p>
-          This repository serves as the public trust center for institutional buyers, utility innovation teams, and M&A technology scouts evaluating the platform’s architecture, data governance, and regulatory posture.
+      <div class="hero-main">
+        <div class="eyebrow">B2B platform framework</div>
+        <h1>Validate energy telemetry. Enrich it with environmental signals. Prove it with auditable governance.</h1>
+        <p class="lead">
+          Energy_Core Enterprise is built for institutional buyers, utility innovation teams, and M&A technology scouts that need a clear, evidence-led view of architecture, compliance, and implementation readiness before deeper technical review.
         </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://kernel-v38-project.github.io/energy-core-compliance-framework/">Open Technical Showcase</a>
+          <a class="btn secondary" href="./docs/dpa.md">Review DPA Summary</a>
+          <a class="btn secondary" href="./docs/architecture.md">See Architecture</a>
+        </div>
+
+        <div class="trust-strip">
+          <div class="stat"><span class="k">Access model</span><div class="v">Public docs first, deeper implementation under NDA</div></div>
+          <div class="stat"><span class="k">Buyer value</span><div class="v">Faster diligence for procurement, carve-out, and partnership review</div></div>
+          <div class="stat"><span class="k">Trust posture</span><div class="v">Security, privacy, subprocessors, and release discipline all documented</div></div>
+        </div>
       </div>
 
-      <aside class="hero-card">
-        <div class="small">Access model</div>
-        <div class="stat-grid">
-          <div class="stat">
-            <span class="label">Public</span>
-            <div class="value">Trust center docs, architecture overview, governance summary</div>
-          </div>
-          <div class="stat">
-            <span class="label">Restricted</span>
-            <div class="value">Source code, OpenAPI schemas, detailed implementation under NDA</div>
-          </div>
+      <aside class="hero-side">
+        <img src="./logo.svg" alt="Energy_Core Enterprise logo" />
+        <div class="side-box">
+          <h2>What this framework is for</h2>
+          <p>
+            It gives enterprise teams a concise public path into the platform, plus a controlled way to request deeper source-level access when needed.
+          </p>
+        </div>
+        <div class="side-box">
+          <h2>Who it is for</h2>
+          <p>
+            Procurement teams, utility innovation leaders, compliance reviewers, and corporate development teams assessing IP value and technical readiness.
+          </p>
         </div>
       </aside>
     </section>
 
     <section class="section">
-      <h2>IP Acquisition & Corporate Technology Transfer</h2>
-      <div class="grid-2">
-        <div class="feature">
-          <h3>Private core assets</h3>
-          <p>The core intellectual property and source code for energy_core are maintained in a private repository.</p>
-        </div>
-        <div class="feature">
-          <h3>Public purpose</h3>
-          <p>This public repository gives reviewers an immediate, reliable pass on architecture and compliance posture.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Core Architectural Blueprint</h2>
-      <p>The platform is organized around four enterprise layers:</p>
+      <h2>Core platform layers</h2>
+      <p>The platform is organized to support controlled data flow, operational traceability, and enterprise oversight.</p>
       <div class="grid-4">
-        <div class="feature">
-          <h3>Field Telemetry</h3>
-          <p>Read-only ingestion from physical SCADA/PLC systems through secure edge gateways.</p>
-        </div>
-        <div class="feature">
-          <h3>Copernicus Engine</h3>
-          <p>ETL pipelines enriching telemetry with European Copernicus satellite weather data.</p>
-        </div>
-        <div class="feature">
-          <h3>Audit Trail</h3>
-          <p>Workflow and revenue traceability backed by blockchain-aligned notarization.</p>
-        </div>
-        <div class="feature">
-          <h3>Operations UI</h3>
-          <p>High-performance multipage executive interface for multi-site analytics.</p>
-        </div>
+        <div class="card"><h3>Field Telemetry Layer</h3><p>Read-only ingestion from physical SCADA / PLC systems through secure edge gateways.</p></div>
+        <div class="card"><h3>Environmental Validation Engine</h3><p>Copernicus / Sentinel-enriched ETL for weather and site-context validation.</p></div>
+        <div class="card"><h3>Audit Trail Layer</h3><p>Workflow and revenue traceability with blockchain-aligned notarization support.</p></div>
+        <div class="card"><h3>Enterprise Operations UI</h3><p>Secure multi-site review and decision support for business operations.</p></div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Enterprise Governance & Trust Center</h2>
-      <p>Clicca sui pulsanti qui sotto per leggere le anteprime dei documenti ufficiali direttamente in questa pagina:</p>
-      
-      <div class="docs">
-        <div class="doc-card">
-          <h3><a onclick="showDoc('security')">➡️ Read Security Policy</a></h3>
-          <p>Security controls and vulnerability management protocols.</p>
-        </div>
-        <div class="doc-card">
-          <h3><a onclick="showDoc('privacy')">➡️ Read Privacy Blueprint</a></h3>
-          <p>Data processing scopes, retention periods, and GDPR mapping.</p>
-        </div>
-        <div class="doc-card">
-          <h3><a onclick="showDoc('dpa')">➡️ Read DPA Summary</a></h3>
-          <p>Controller-to-Processor formal boundaries and liability terms.</p>
-        </div>
-        <div class="doc-card">
-          <h3><a onclick="showDoc('sub')">➡️ Read Subprocessor Inventory</a></h3>
-          <p>Third-party sub-processors and data residency constraints.</p>
-        </div>
-      </div>
-
-      <div id="viewer-container" style="display: none; margin-top: 20px;">
-        <h4 id="viewer-title" style="margin: 10px 0 5px; color: var(--accent-2);">Document View</h4>
-        <div id="viewer" class="compliance-viewer">Seleziona un documento...</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Due Diligence & Source Code Access</h2>
-      <p>The full production codebase, smart contracts, and OpenAPI schemas can be shared under a standard Non-Disclosure Agreement (NDA). Please open a GitHub Issue to get in touch with the author.</p>
-    </section>
-
-    <footer class="footer">
-      <span>© 2026 energy_core Enterprise</span>
-      <span>Public trust center • Embedded Compliance Engine</span>
-    </footer>
-  </div>
-
-  <script>
-    const docsData = {
-      security: `[SECURITY POLICY - PREVIEW]\nStatus: ACTIVE\nScope: Enterprise Energy Telemetry Framework\n\n1. Encryption Guards\n- All database assets utilize AES-256 transparent data encryption at rest.\n- TLS 1.3 enforced for all telemetry data ingestion pipelines via secure Edge Gateways.\n\n2. Access Control\n- Least-Privilege operational architecture.\n- Strict Multi-Tenancy validation running on core Row-Level Security (RLS) simulation logic.\n- System execution guarded by explicit production startup safety checks.`,
-      
-      privacy: `[PRIVACY OVERVIEW - GDPR COMPLIANCE]\nStatus: VERIFIED\nScope: Copernicus ETL & Utility Metering\n\n1. Data Minimization\n- The application processes only machine-to-machine SCADA readings and climate datasets.\n- No direct personally identifiable information (PII) is stored or tracked within core telemetry logs.\n\n2. Retention Schedules\n- Environmental logs are compiled and indexed for a maximum duration of 5 rolling years.\n- Audit trail notarizations are permanent and immutable.`,
-      
-      dpa: `[DATA PROCESSING AGREEMENT SUMMARY]\nStatus: PRODUCTION READY\nClassification: Controller-to-Processor (Standard Contractual Clauses)\n\n1. Operational Boundaries\n- The platform executes tasks strictly as a technological Processor under customer direction.\n- The underlying infrastructure is optimized for client-managed, self-hosted deployment models to eliminate third-party data residency friction under GDPR rules.`,
-      
-      sub: `[SUBPROCESSOR INVENTORY]\nStatus: AUDITED\nLast Update: June 2026\n\nTo ensure structural independence and reduce data supply-chain liability, the energy_core enterprise engine operates with only two validated primary infrastructural partners:\n\n1. GitHub Inc. (Code hosting, static document versioning, and CI/CD pipelines).\n2. Streamlit / Snowflake Inc. (Executive Dashboard rendering, limited to interface execution logs).\n\n*Note: Default configuration supports a 100% On-Premises or Private Cloud carve-out.*`
-    };
-
-    function showDoc(key) {
-      document.getElementById('viewer-container').style.display = 'block';
-      document.getElementById('viewer').textContent = docsData[key];
-      document.getElementById('viewer-title').textContent = "Previewing: " + key.toUpperCase() + " POLICY (Embedded Live)";
-      document.getElementById('viewer-container').scrollIntoView();
-    }
-  </script>
-</body>
-</html>
+      <h2>Why buyers care</h2>
+      <div class="grid-2">
+        <div class="card"><h3>Decision-grade transparency</h3><p>Public documentation is structured to help buyers understand what the platform does, how it is governed, and what remains under NDA.</p></div>
+        <div class="card"><h3>Due dilig
