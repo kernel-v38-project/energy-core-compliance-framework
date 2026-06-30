@@ -12,6 +12,7 @@
             --text-muted: #8b949e;
             --accent-color: #238636;
             --accent-hover: #2ea043;
+            --link-color: #58a6ff;
             --border-color: #30363d;
         }
         body {
@@ -76,6 +77,7 @@
             border-radius: 20px;
             font-size: 0.85rem;
             color: var(--text-muted);
+            margin-right: 5px;
         }
         section {
             margin-bottom: 30px;
@@ -89,7 +91,15 @@
             padding-left: 20px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+        }
+        a.doc-link {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a.doc-link:hover {
+            text-decoration: underline;
         }
         code {
             background-color: #21262d;
@@ -132,12 +142,13 @@
 
             <section>
                 <h3>🛡️ Single Source of Truth (Trust Center)</h3>
-                <p>Per l'analisi dei requisiti di sicurezza, privacy e audit aziendale, fare riferimento ai file canonici inclusi nel modulo:</p>
+                <p>Seleziona uno dei moduli ufficiali per consultare la documentazione di audit e conformità direttamente nel repository:</p>
                 <ul>
-                    <li><strong>TRUST_CENTER.md:</strong> Il fulcro della governance e dell'allineamento dei requisiti di approvvigionamento.</li>
-                    <li><strong>PRIVACY.md & DPA.md:</strong> Documentazione di sintesi sulla conformità e sulla gestione dei flussi dei dati (GDPR compliant).</li>
-                    <li><strong>SUBPROCESSORS.md:</strong> L'elenco trasparente ed aggiornato dei sottoprocessori infrastrutturali.</li>
-                    <li><strong>SECURITY_FAQ.md:</strong> Postura di sicurezza e risposte standard approvate per i controlli di sicurezza aziendali.</li>
+                    <li><a class="doc-link" href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/TRUST_CENTER.md">TRUST_CENTER.md</a> — Il fulcro della governance e dell'allineamento dei requisiti di approvvigionamento.</li>
+                    <li><a class="doc-link" href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/PRIVACY.md">PRIVACY.md</a> — Panoramica sulla conformità e sulla gestione della riservatezza dei dati.</li>
+                    <li><a class="doc-link" href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/DPA.md">DPA.md</a> — Documentazione di sintesi sul trattamento dei dati (GDPR compliant).</li>
+                    <li><a class="doc-link" href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/subprocessors.md">SUBPROCESSORS.md</a> — L'elenco trasparente ed aggiornato dei sottoprocessori infrastrutturali.</li>
+                    <li><a class="doc-link" href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/SECURITY_FAQ.md">SECURITY_FAQ.md</a> — Postura di sicurezza e risposte standard approvate per i controlli aziendali.</li>
                 </ul>
             </section>
 
