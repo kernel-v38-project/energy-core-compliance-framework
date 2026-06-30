@@ -3,213 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>energy_core — Framework di Conformità Aziendale</title>
+    <title>Energy Core - Compliance Framework</title>
     <style>
         :root {
-            --bg-color: #0E1117;
-            --card-bg: #161B22;
-            --border-color: #30363D;
-            --text-main: #C9D1D9;
-            --text-muted: #8B949E;
-            --accent-color: #00FFA3;
-            --white: #FFFFFF;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #238636;
+            --accent-hover: #2ea043;
+            --border-color: #30363d;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 40px 20px;
+            color: var(--text-color);
             line-height: 1.6;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
-
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 25px;
-            margin-bottom: 40px;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: var(--white);
             margin: 0;
-            font-weight: 800;
-            letter-spacing: -0.5px;
+            padding: 0;
         }
-
-        h1 span {
-            color: var(--accent-color);
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-
-        .subtitle {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 600;
-            margin: 5px 0 0 0;
+        .m-a-banner {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+            text-align: center;
         }
-
-        p {
-            font-size: 1.05rem;
-            color: var(--text-main);
+        .m-a-banner h2 {
             margin-top: 0;
+            color: #f9fafb;
+            font-size: 1.4rem;
+        }
+        .m-a-banner p {
+            color: #d1d5db;
+            font-size: 0.95rem;
             margin-bottom: 20px;
         }
-
-        h2 {
-            font-size: 1.4rem;
-            color: var(--accent-color);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 12px;
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
         }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
             margin-bottom: 30px;
         }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
+        h1 {
+            font-size: 2rem;
+            color: #f0f6fc;
+            margin-bottom: 8px;
         }
-
-        .card h3 {
-            color: var(--white);
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 0;
-        }
-
-        /* Stile specifico per i Link della Navigazione Rapida */
-        .nav-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 25px;
-            margin-top: 25px;
-        }
-
-        .nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a::before {
-            content: "📄";
-            margin-right: 10px;
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-        }
-
         .badge {
             display: inline-block;
-            background-color: rgba(0, 255, 163, 0.1);
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
             padding: 4px 10px;
-            border-radius: 4px;
+            border-radius: 20px;
             font-size: 0.85rem;
-            font-weight: 600;
-            margin-top: 30px;
+            color: var(--text-muted);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: #f0f6fc;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        code {
+            background-color: #21262d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 0.9rem;
+        }
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="logo-area">
-            <h1>energy_<span>core</span></h1>
-        </div>
-        <div class="subtitle">PROJECT BLACKSTART &bull; TECH & COMPLIANCE HUB</div>
-    </header>
-
-    <main>
-        <p><strong>energy_core Enterprise</strong> è una piattaforma B2B architettata come framework per la convalida della telemetria energetica, l'arricchimento dei dati operativi con i segnali ambientali di Copernicus/Sentinel e il mantenimento di una conformità verificabile per implementazioni su scala aziendale e di utility[span_3](start_span)[span_3](end_span).</p>
+    <div class="container">
         
-        <p>Questo hub di documentazione indicizza le policy di governance e i moduli di sicurezza necessari per superare istantaneamente le procedure di procurement e di due diligence istituzionale prima di un'analisi tecnica approfondita del codice sorgente privato[span_4](start_span)[span_4](end_span).</p>
-
-        <h2>Funzionalità Principali del Framework</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Validazione Telemetria</h3>
-                <p>Acquisizione sicura in sola lettura da sistemi SCADA/PLC fisici tramite gateway edge per azzerare i rischi di exploit cyber-fisici[span_5](start_span)[span_5](end_span).</p>
-            </div>
-            <div class="card">
-                <h3>Motore Ambientale</h3>
-                <p>Pipeline ETL automatizzate che arricchiscono i dati degli asset con metriche meteorologiche e di posizione satellitare di Copernicus/Sentinel[span_6](start_span)[span_6](end_span).</p>
-            </div>
-            <div class="card">
-                <h3>Registro delle Attività</h3>
-                <p>Tracciabilità immutabile dei carichi di lavoro operativi con supporto nativo per la notarizzazione crittografica allineata alla rete Polygon[span_7](start_span)[span_7](end_span).</p>
-            </div>
-            <div class="card">
-                <h3>Corporate Trust Center</h3>
-                <p>Quadro normativo pre-compilato pronto per le aziende comprendente mapplature GDPR, contratti DPA e inventari dei subprocessori[span_8](start_span)[span_8](end_span).</p>
-            </div>
+        <div class="m-a-banner">
+            <h2>💼 Technology Transfer & M&A Opportunities</h2>
+            <p>Sei un investitore istituzionale, una Energy Utility o un Digital Asset Buyer? L'architettura proprietaria di <strong>energy_core</strong> (Backend Python, Smart Contracts Solidity su rete Polygon e integrazione satellitare Copernicus) è disponibile per l'acquisizione e il trasferimento tecnologico completo dell'IP.</p>
+            <a href="mailto:napoligioacchino74@gmail.com?subject=Energy%20Core%20-%20M%26A%20and%20Due%20Diligence%20Inquiry" class="btn">Richiedi Accesso al Codice Privato (NDA)</a>
         </div>
 
-        <h2>Navigazione Rapida dei Documenti di Due Diligence</h2>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">Seleziona un documento qui sotto per esaminare le specifiche formali ospitate in modo sicuro sul repository principale[span_9](start_span)[span_9](end_span):</p>
-        
-        <div class="nav-box">
-            <div class="nav-links">
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/TRUST_CENTER.md" target="_blank">Corporate Trust Center (TRUST_CENTER.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/DPA_summary.md" target="_blank">Quadro Trattamento Dati GDPR (DPA_summary.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/subprocessors.md" target="_blank">Inventario dei Subprocessori Statici (subprocessors.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/audit-evidence.md" target="_blank">Registri di Controllo ed Evidenze di Audit (audit-evidence.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/change-log-policy.md" target="_blank">Politica di Modifica e Controllo Rilasci (change-log-policy.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/review-cadence.md" target="_blank">Cadenza di Revisione della Governance (review-cadence.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/ruoli-e-proprietari.md" target="_blank">Matrice delle Responsabilità (ruoli-e-proprietari.md)</a>
-                <a href="https://github.com/kernel-v38-project/energy-core-compliance-framework/blob/main/docs/manutenzione.md" target="_blank">Protocollo di Manutenzione e Asset-Light (manutenzione.md)</a>
-            </div>
-        </div>
+        <header>
+            <h1>Energy Core Compliance Framework</h1>
+            <span class="badge">Ecosistema Enterprise</span>
+            <span class="badge">Infrastruttura Verificabile</span>
+        </header>
 
-        <div class="badge">Sito Istituzionale Protetto &bull; Codice Sorgente in Repository Privato</div>
-    </main>
-</div>
+        <main>
+            <section>
+                <h3>📌 Panoramica del Sistema</h3>
+                <p>Questo repository pubblico costituisce l'infrastruttura di governance, mappatura legale e conformità speculare per la piattaforma core privata <code>energy_core</code>. Il framework è progettato per garantire il massimo livello di aderenza agli standard ciber-fisici industriali e alle normative di protezione dei dati.</p>
+            </section>
+
+            <section>
+                <h3>🛡️ Single Source of Truth (Trust Center)</h3>
+                <p>Per l'analisi dei requisiti di sicurezza, privacy e audit aziendale, fare riferimento ai file canonici inclusi nel modulo:</p>
+                <ul>
+                    <li><strong>TRUST_CENTER.md:</strong> Il fulcro della governance e dell'allineamento dei requisiti di approvvigionamento.</li>
+                    <li><strong>PRIVACY.md & DPA.md:</strong> Documentazione di sintesi sulla conformità e sulla gestione dei flussi dei dati (GDPR compliant).</li>
+                    <li><strong>SUBPROCESSORS.md:</strong> L'elenco trasparente ed aggiornato dei sottoprocessori infrastrutturali.</li>
+                    <li><strong>SECURITY_FAQ.md:</strong> Postura di sicurezza e risposte standard approvate per i controlli di sicurezza aziendali.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>🚀 Stato dell'Infrastruttura Aziendale</h3>
+                <ul>
+                    <li><strong>Stato SCIM 2.0:</strong> <code>In fase di sviluppo</code>. I protocolli di gestione delle identità per l'autenticazione centralizzata non sono abilitati sugli endpoint attivi del backend, garantendo un perimetro isolato durante la fase di migrazione.</li>
+                    <li><strong>Integrità del Codice:</strong> I processi interni del modulo core seguono pipeline CI/CD continue assistite da modelli di validazione strutturale e logica (GitHub Copilot standard), azzerando le regressioni e il debito tecnico.</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 GitHub, Inc. / kernel-v38-project. Gestione documentale protetta da licenza IP proprietaria.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
