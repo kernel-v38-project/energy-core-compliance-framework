@@ -81,3 +81,10 @@ It is not the full production system.
 ## Release discipline
 
 Public documents are maintained through a controlled update process so that DPA, subprocessors, release notes, and evidence stay aligned as the platform changes.
+
+
+## ⭐ Support the Project
+
+If you are evaluating the Energy Core Compliance Framework or found our architecture useful, please consider leaving a technical review on Product Hunt. Your feedback helps us improve the governance standard!
+
+👉 [Leave a Review on Product Hunt](https://www.producthunt.com/products/energy-core/reviews/new)
