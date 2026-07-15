@@ -1,4 +1,4 @@
-> ⚠️ **Architecture Note**: This repository hosts the **compliance frontend and dashboard interface** (the visual cockpit for operators and auditors). The core cryptographic validation engine, database adapters, and high-frequency telemetry ingestion layers run decoupled at the infrastructure level to guarantee performance, isolation, and security.
+> ⚠️ **Architecture Note**: This repository hosts the **compliance frontend and dashboard interface** (the visual cockpit for operators and auditors). The core cryptographic validation engine and high-frequency telemetry ingestion layers are decoupled and hosted in a **separate, dedicated repository (fully operational and running error-free)** to guarantee infrastructure-level security, performance, and isolation.
 > 
 # Energy_Core Enterprise
 ## Energy telemetry validation, compliance, and architecture framework
