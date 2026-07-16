@@ -1,3 +1,9 @@
+## 🏗️ System Architecture
+
+To understand how Energy Core decouples real-time telemetry from data notarization without impacting control loop performance, please refer to our system diagram:
+
+👉 **[View the System Architecture Diagram](ARCHITECTURE.md)**
+
 > ⚠️ **Architecture Note**: This repository hosts the **compliance frontend and dashboard interface** (the visual cockpit for operators and auditors). The core cryptographic validation engine and high-frequency telemetry ingestion layers are decoupled and hosted in a **separate, dedicated repository (fully operational and running error-free)** to guarantee infrastructure-level security, performance, and isolation.
 > 
 # Energy_Core Enterprise
